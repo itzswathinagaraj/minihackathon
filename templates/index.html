@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2>Welcome to the College Event Portal</h2>
+<p>Browse and register for upcoming college events!</p>
+
+<ul>
+    <li><a href="{{ url_for('event_detail', event_id=1) }}">Tech Fest 2025</a></li>
+    <li><a href="{{ url_for('event_detail', event_id=2) }}">Cultural Night</a></li>
+</ul>
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}College Event Portal{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v={{ time }}">
+
+</head>
+
+<body>
+    <header>
+        <h1>College Event Portal</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a> |
+            <a href="{{ url_for('login') }}">Login</a> |
+            <a href="{{ url_for('register_user') }}">Register</a> |
+            <a href="{{ url_for('create_event') }}">Create Event</a> |
+            <a href="{{ url_for('admin_dashboard') }}">Admin Dashboard</a> |
+            <a href="{{ url_for('my_registrations') }}">My Registrations</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 College Event Portal</p>
+    </footer>
+</body>
+
+</html>
